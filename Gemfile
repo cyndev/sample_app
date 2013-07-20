@@ -34,6 +34,7 @@ group :test do
 end
 
 # added by book suggestion
+# this is for PostgreSQL instead of sqlite3
 group :production do
 	gem 'pg'
 end
