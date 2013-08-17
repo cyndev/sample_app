@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc2'
 
+gem 'bootstrap-sass'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'guard-rspec'
 end
 
 # Gems used only for assets and not required
@@ -30,7 +33,12 @@ gem 'jquery-rails'
 
 # added by book suggestion
 group :test do
+	gem 'rspec-rails'
 	gem 'capybara'
+	gem 'rb-fsevent', :require => false
+	gem 'growl'
+	gem 'guard-spork'
+	gem 'spork'
 end
 
 # added by book suggestion

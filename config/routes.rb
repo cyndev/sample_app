@@ -1,8 +1,22 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
-  get "static_pages/contact"
+  get "users/new"
+  # tutorial recommends the following but it fails my version of rails
+  # match '/help',    to: 'static_pages#help'
+  # match '/about',   to: 'static_pages#about'
+  # match '/contact', to: 'static_pages#contact'
+  # the rails error message says to use get or via: [:get, :post] 
+
+  #root  'static_pages#home'
+
+  root  'static_pages#home'
+  get '/home' => 'static_pages#home'
+  get '/help' => 'static_pages#help'
+  get '/about' => 'static_pages#about'
+  get '/contact' =>'static_pages#contact'
+
+  get '/signup' => 'users#new'
+
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
